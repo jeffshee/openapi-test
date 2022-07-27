@@ -1,0 +1,41 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/jeffshee/Developer/Test/openapi-test/minimal'
+mkdir -p .m2
+mkdir -p maven-repo-local
+mkdir -p build
+mkdir -p codegen
+docker pull openapitools/openapi-generator-cli:v5.2.0
+docker pull maven:3-openjdk-8
+docker run -it --rm -e TZ="Asia/Tokyo" \
+	-u 1000:1000 \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/api.yaml:/api.yaml:ro \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/codegen:/codegen \
+	openapitools/openapi-generator-cli:v5.2.0 generate -g jaxrs-jersey -i /api.yaml -o /codegen --group-id io.github.jeffshee --artifact-id openapitest --api-package io.github.jeffshee.openapitest.api --model-package io.github.jeffshee.openapitest.model --import-mappings=DateTime=java.time.LocalDateTime --type-mappings=DateTime=java.time.LocalDateTime --global-property skipFormModel=false
+cp -p -r /home/jeffshee/Developer/Test/openapi-test/minimal/codegen/pom.xml /home/jeffshee/Developer/Test/openapi-test/minimal/codegen/src /home/jeffshee/Developer/Test/openapi-test/minimal/build/  # copy auto generated files
+cp -p -r /home/jeffshee/Developer/Test/openapi-test/minimal/override/* /home/jeffshee/Developer/Test/openapi-test/minimal/build/  # override  files
+docker run -it --rm  \
+	-u 1000:1000 \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/.m2:/var/maven/.m2 \
+	-e MAVEN_CONFIG=/var/maven/.m2 \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/build:/home/jeffshee/Developer/Test/openapi-test/minimal/build -w /home/jeffshee/Developer/Test/openapi-test/minimal/build \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local:/home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local -e MAVEN_OPTS="-Dmaven.repo.local=/home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local -Duser.home=/var/maven" \
+	maven:3-openjdk-8 mvn package
+docker run -it --rm  \
+	-u 1000:1000 \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/.m2:/var/maven/.m2 \
+	-e MAVEN_CONFIG=/var/maven/.m2 \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/build:/home/jeffshee/Developer/Test/openapi-test/minimal/build -w /home/jeffshee/Developer/Test/openapi-test/minimal/build \
+	-v /home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local:/home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local -e MAVEN_OPTS="-Dmaven.repo.local=/home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local -Duser.home=/var/maven" \
+	maven:3-openjdk-8 mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+docker build -f docker/Dockerfile \
+  --build-arg mavenImg=maven:3-openjdk-8 \
+  --build-arg dir_top=/home/jeffshee/Developer/Test/openapi-test/minimal --build-arg dir_build=`basename /home/jeffshee/Developer/Test/openapi-test/minimal/build` --build-arg dir_maven_repo_local=`basename /home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local` \
+  -t openapitest:openapitest ./
+mavenImg=maven:3-openjdk-8 \
+dir_maven_repo_local=/home/jeffshee/Developer/Test/openapi-test/minimal/maven-repo-local \
+containerName=openapitest hostName=openapitest \
+RestPortHTTP=8080 \
+dir_build=/home/jeffshee/Developer/Test/openapi-test/minimal/build  \
+docker-compose up -d
+make: Leaving directory '/home/jeffshee/Developer/Test/openapi-test/minimal'
+ 

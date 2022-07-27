@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  cdlfrontserver:
+    image: ${mavenImg}
+    container_name: ${containerName}
+    hostname: ${hostName}
+    ports:
+     - ${RestPortHTTP}:8080
+    volumes:
+      - ${dir_build}:${dir_build}
+      - ${dir_maven_repo_local}:${dir_maven_repo_local}
+    working_dir: ${dir_build}
+    command: mvn -Dmaven.repo.local=${dir_maven_repo_local} ${JAVA_OPTS} jetty:run

@@ -1,0 +1,116 @@
+openapi: '3.0.0'
+info:
+  title: OpenAPI Test
+  version: '1.0'
+servers:
+  - url: http://localhost:8080/v1
+
+paths:
+  /test1:
+    post:
+      tags:
+        - This is not working
+      operationId: test1
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                request:
+                  $ref: '#/components/schemas/TestRequest'
+                upfile:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Sever Error
+        '502':
+          description: Bad Gateway
+  /test2:
+    post:
+      tags:
+        - This is working
+      operationId: test2
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+                  example: anything
+                upfile:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Sever Error
+        '502':
+          description: Bad Gateway
+    
+  /test3:
+    post:
+      tags:
+        - This is also working
+      operationId: test3
+      requestBody:
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/TestRequest'
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Sever Error
+        '502':
+          description: Bad Gateway
+            
+components:
+  schemas:
+    TestRequest:
+      type: object
+      properties:
+        foo:
+          type: string
+          example: foo
+        bar:
+          type: string
+          example: bar
+        baz:
+          type: string
+          example: baz

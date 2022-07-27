@@ -1,0 +1,446 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-redhat-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jul 27 13:28:02 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 12)
+GID = 1000
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_CWD = /home/jeffshee
+# environment
+WINDOWPATH = 2
+# makefile (from 'Makefile', line 8)
+package_model = ${package_base}.model
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GDM_LANG = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 13)
+JAVA_OPTS = -Duser.home=/var/maven
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/jeffshee/Developer/Test/openapi-test/minimal
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+HOSTNAME = ikaros
+# environment
+MAIL = /var/spool/mail/jeffshee
+# environment
+STEAM_FRAME_FORCE_CLOSE = 1
+# environment
+XDG_DATA_DIRS = /home/jeffshee/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+# environment
+OLDPWD = /home/jeffshee
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/jeffshee/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [01;31m
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [00;47;30m
+# makefile
+CURDIR := /home/jeffshee/Developer/Test/openapi-test/minimal
+# makefile (from 'Makefile', line 4)
+pom_gid = io.github.jeffshee
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = ||/usr/bin/lesspipe.sh %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+HISTSIZE = 10000
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = gnome-xorg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 21)
+dir_build = ${PWD}/build
+# environment
+VSCODE_PID = 18898
+# environment
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 16)
+api_yaml = ${PWD}/api.yaml
+# environment
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2547,unix/unix:/tmp/.ICE-unix/2547
+# environment
+PROMPT_EOL_MARK = 
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'Makefile', line 36)
+imgTag = openapitest
+# makefile (from 'Makefile', line 6)
+package_base = ${pom_gid}.${pom_artifactId}
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-redhat-linux-gnu
+# makefile (from 'Makefile', line 1)
+SHELL = bash
+# environment
+LESS_TERMCAP_us = [01;32m
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# makefile (from 'Makefile', line 25)
+codegenBaseImg = openapitools/openapi-generator-cli:v5.2.0
+# makefile (from 'Makefile', line 11)
+UID = 1000
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/jeffshee/.local/share/JetBrains/Toolbox/scripts:/home/jeffshee/.local/share/JetBrains/Toolbox/scripts:/home/jeffshee/.local/bin
+# environment
+LESS_TERMCAP_se = [0m
+# environment
+MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+LESS_TERMCAP_mb = [01;31m
+# environment
+INVOCATION_ID = cec6b9094ff04b028be7ac73d1df938f
+# makefile (from 'Makefile', line 19)
+dir_maven_repo_local = ${PWD}/maven-repo-local
+# environment
+USERNAME = jeffshee
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_CURRENT_DESKTOP = GNOME
+# environment
+LS_COLORS = di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 5)
+pom_artifactId = openapitest
+# environment
+LESS = -g -i -M -R -S -w -X -z-4
+# environment
+DESKTOP_SESSION = gnome-xorg
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+GREP_COLOR = 37;45
+# makefile (from 'Makefile', line 10)
+RestPortHTTP = 8080
+# makefile (from 'Makefile', line 20)
+dir_codegen = ${PWD}/codegen
+# environment
+GREP_COLORS = mt=37;45
+# environment
+LOGNAME = jeffshee
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 2600
+# environment
+HISTCONTROL = ignoredups
+# makefile (from 'Makefile', line 7)
+package_api = ${package_base}.api
+# environment
+EDITOR = /usr/bin/nano
+# environment
+DISPLAY = :0
+# environment
+USER = jeffshee
+# default
+MAKE_VERSION := 4.3
+# environment
+MANAGERPID = 2363
+# environment
+which_declare = typeset -f
+# environment
+DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 18898
+# environment
+SSH_AGENT_PID = 2509
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# makefile (from 'Makefile', line 27)
+mavenImg = maven:3-openjdk-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 22)
+dir_impl = ${PWD}/override
+# makefile (from 'Makefile', line 30)
+codegenOpt = --group-id ${pom_gid} --artifact-id ${pom_artifactId} --api-package ${package_api} --model-package ${package_model} --import-mappings=DateTime=java.time.LocalDateTime --type-mappings=DateTime=java.time.LocalDateTime --global-property skipFormModel=false
+# environment
+JOURNAL_STREAM = 8:38821
+# environment
+VISUAL = nano
+# environment
+CONDA_CHANGEPS1 = no
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/jeffshee
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0207c4fa-1.69.2-main.sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = gnome-xorg
+# variable set hash-table stats:
+# Load=130/1024=13%, Rehash=0, Collisions=27/232=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 38, inode 2356661): 13 files, no impossibilities.
+
+# 13 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+ 
+start: /home/jeffshee/Developer/Test/openapi-test/minimal/build/pom.xml
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 80):
+	mavenImg=${mavenImg} \
+	dir_maven_repo_local=${dir_maven_repo_local} \
+	containerName=${pom_artifactId} hostName=${pom_artifactId} \
+	RestPortHTTP=${RestPortHTTP} \
+	dir_build=${dir_build}  \
+	docker-compose up -d
+
+cleanAll: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 105):
+	rm -rf .m2
+	rm -rf maven-repo-local
+
+compile:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := compile
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/75=4%
+#  recipe to execute (from 'Makefile', line 41):
+	mkdir -p .m2
+	mkdir -p maven-repo-local
+	mkdir -p build
+	mkdir -p codegen
+	docker pull ${codegenBaseImg}
+	docker pull ${mavenImg}
+	docker run -it --rm -e TZ="Asia/Tokyo" \
+		-u ${UID}:${GID} \
+		-v ${api_yaml}:/api.yaml:ro \
+		-v ${dir_codegen}:/codegen \
+		${codegenBaseImg} generate -g jaxrs-jersey -i /api.yaml -o /codegen ${codegenOpt}
+	
+	cp -p -r ${dir_codegen}/pom.xml ${dir_codegen}/src ${dir_build}/  # copy auto generated files
+	cp -p -r ${dir_impl}/* ${dir_build}/  # override  files
+	docker run -it --rm  \
+		-u ${UID}:${GID} \
+		-v ${PWD}/.m2:/var/maven/.m2 \
+		-e MAVEN_CONFIG=/var/maven/.m2 \
+		-v ${dir_build}:${dir_build} -w ${dir_build} \
+		-v ${dir_maven_repo_local}:${dir_maven_repo_local} -e MAVEN_OPTS="-Dmaven.repo.local=${dir_maven_repo_local} ${JAVA_OPTS}" \
+		${mavenImg} mvn package
+	docker run -it --rm  \
+		-u ${UID}:${GID} \
+		-v ${PWD}/.m2:/var/maven/.m2 \
+		-e MAVEN_CONFIG=/var/maven/.m2 \
+		-v ${dir_build}:${dir_build} -w ${dir_build} \
+		-v ${dir_maven_repo_local}:${dir_maven_repo_local} -e MAVEN_OPTS="-Dmaven.repo.local=${dir_maven_repo_local} ${JAVA_OPTS}" \
+		${mavenImg} mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-26 19:43:31.603996807
+#  File has been updated.
+#  Successfully updated.
+
+buildImg: /home/jeffshee/Developer/Test/openapi-test/minimal/build/pom.xml
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 95):
+	docker build -f docker/Dockerfile \
+	  --build-arg mavenImg=${mavenImg} \
+	  --build-arg dir_top=${PWD} --build-arg dir_build=`basename ${dir_build}` --build-arg dir_maven_repo_local=`basename ${dir_maven_repo_local}` \
+	  -t ${pom_artifactId}:${imgTag} ./
+
+clean: stop
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 101):
+	rm -rf build
+	rm -rf codegen
+
+stop:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 88):
+	mavenImg=${mavenImg}  \
+	dir_maven_repo_local=${dir_maven_repo_local} \
+	dir_build=${dir_build}  \
+	RestPortHTTP=${RestPortHTTP} \
+	docker-compose down -v
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all:: compile buildImg start
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/67=0%
+
+# Not a target:
+/home/jeffshee/Developer/Test/openapi-test/minimal/build/pom.xml:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=11/1024=1%, Rehash=0, Collisions=0/34=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 25 / storage = 275 B / avg = 11 B
+# current buf: size = 8162 B / used = 275 B / count = 25 / avg = 11 B
+
+# strcache performance: lookups = 44 / hit rate = 43%
+# hash-table stats:
+# Load=25/8192=0%, Rehash=0, Collisions=0/44=0%
+# Finished Make data base on Wed Jul 27 13:28:03 2022
+
+ 
